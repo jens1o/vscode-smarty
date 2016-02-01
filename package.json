@@ -1,0 +1,26 @@
+{
+	"name": "smarty",
+	"displayName": "smarty",
+	"description": "Syntax highlighting for the Smarty templating language.",
+	"version": "0.0.1",
+	"publisher": "imperez",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "smarty",
+			"aliases": ["Smarty", "smarty"],
+			"extensions": [".tpl",".smarty",".html.smarty"],
+			"configuration": "./smarty.configuration.json"
+		}],
+		"grammars": [{
+			"language": "smarty",
+			"scopeName": "text.html.smarty",
+			"path": "./syntaxes/smarty.tmLanguage"
+		}]
+	}
+}
