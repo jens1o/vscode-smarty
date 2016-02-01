@@ -1,6 +1,6 @@
 {
 	"name": "smarty",
-	"displayName": "smarty",
+	"displayName": "Smarty",
 	"description": "Syntax highlighting for the Smarty templating language.",
 	"version": "0.0.1",
 	"publisher": "imperez",
@@ -10,6 +10,19 @@
 	"categories": [
 		"Languages"
 	],
+	"keywords": [
+		"smarty",
+		"php",
+		"syntax"
+	],
+	"bugs": {
+        "url": "https://github.com/imperez/vscode-smarty/issues"
+    },
+	"homepage": "https://github.com/imperez/vscode-smarty/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/imperez/vscode-smarty.git"
+    },
 	"contributes": {
 		"languages": [{
 			"id": "smarty",
