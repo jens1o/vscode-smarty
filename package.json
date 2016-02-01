@@ -3,6 +3,7 @@
 	"displayName": "Smarty",
 	"description": "Syntax highlighting for the Smarty templating language.",
 	"version": "0.0.1",
+	"icon": "images/logo.png",
 	"publisher": "imperez",
 	"engines": {
 		"vscode": "^0.10.1"
