@@ -2,19 +2,21 @@
 	"name": "smarty",
 	"displayName": "Smarty",
 	"description": "Syntax highlighting for the Smarty templating language.",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"icon": "images/logo.png",
 	"publisher": "imperez",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
 	"categories": [
-		"Languages"
+		"Languages",
+		"Snippets"
 	],
 	"keywords": [
 		"smarty",
 		"php",
-		"syntax"
+		"syntax",
+		"snippets"
 	],
 	"bugs": {
         "url": "https://github.com/imperez/vscode-smarty/issues"
@@ -35,6 +37,12 @@
 			"language": "smarty",
 			"scopeName": "text.html.smarty",
 			"path": "./syntaxes/smarty.tmLanguage"
-		}]
+		}],
+		"snippets": [
+			{
+				"language": "smarty",
+				"path": "./snippets/snippets.json"
+			}
+		]
 	}
 }
