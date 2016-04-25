@@ -2,11 +2,11 @@
 	"name": "smarty",
 	"displayName": "Smarty",
 	"description": "Syntax highlighting for the Smarty templating language.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"icon": "images/logo.png",
 	"publisher": "imperez",
 	"engines": {
-		"vscode": "^0.10.1"
+		"vscode": "^0.10.x"
 	},
 	"categories": [
 		"Languages",
