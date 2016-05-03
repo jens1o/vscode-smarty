@@ -5,6 +5,8 @@
 	<key>fileTypes</key>
 	<array>
 		<string>tpl</string>
+		<string>smarty</string>
+		<string>html.smarty</string>
 	</array>
 	<key>injections</key>
 	<dict>
@@ -19,6 +21,10 @@
 				<dict>
 					<key>include</key>
 					<string>#blocks</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literals</string>
 				</dict>
 			</array>
 		</dict>
@@ -89,6 +95,10 @@
 							<key>include</key>
 							<string>#lang</string>
 						</dict>
+						<dict>
+							<key>include</key>
+							<string>#literals</string>
+						</dict>
 					</array>
 				</dict>
 			</array>
@@ -155,7 +165,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b</string>
+					<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b</string>
 					<key>name</key>
 					<string>support.function.built-in.smarty</string>
 				</dict>
@@ -323,6 +333,20 @@
 					<string>(-&gt;)([a-zA-Z_][a-zA-Z0-9_]*)(\().*?(\))</string>
 					<key>name</key>
 					<string>variable.other.smarty</string>
+				</dict>
+			</array>
+		</dict>
+		<key>literals</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>{literal</string>
+					<key>end</key>
+					<string>{\/literal</string>
+					<key>include</key>
+					<string>text.html.basic</string>
 				</dict>
 			</array>
 		</dict>
