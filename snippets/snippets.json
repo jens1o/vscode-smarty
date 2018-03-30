@@ -91,7 +91,7 @@
 	},
 	"extends": {
 		"prefix": "extends",
-		"body": "\n${SMARTY_LDELIM:\\{}extends file=\"${1:file}\"}${SMARTY_RDELIM:\\}$0\n",
+		"body": "\n${SMARTY_LDELIM:\\{}extends file=\"${1:file}\"${SMARTY_RDELIM:\\}}$0\n",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
