@@ -115,7 +115,7 @@
 	},
 	"literal": {
 		"prefix": "literal",
-		"body": "\n${SMARTY_LDELIM:\\{}literal}${SMARTY_RDELIM:\\}\n\t$0\n${SMARTY_LDELIM:\\{}/literal${SMARTY_RDELIM:\\}}\n",
+		"body": "\n${SMARTY_LDELIM:\\{}literal${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:\\{}/literal${SMARTY_RDELIM:\\}}\n",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	}
