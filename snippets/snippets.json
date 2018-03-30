@@ -1,121 +1,121 @@
 {
 	"assign": {
 		"prefix": "assign",
-		"body": "\n${SMARTY_LDELIM:{}assign var=\"${1:name}\" value=${2:value}${4: scope=${3:scope}}${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}assign var=\"${1:name}\" value=${2:value}${4: scope=${3:scope}}${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"break": {
 		"prefix": "break",
-		"body": "\n${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"/capture": {
 		"prefix": "/capture",
-		"body": "\n${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"capture": {
 		"prefix": "capture",
-		"body": "\n${SMARTY_LDELIM:{}capture ${2:name=\"${1:name}\" }${4:assign=\"${3:variable}\" }${6:append=\"${5:array_variable}\"}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}capture ${2:name=\"${1:name}\" }${4:assign=\"${3:variable}\" }${6:append=\"${5:array_variable}\"}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"case": {
 		"prefix": "case",
-		"body": "\n${SMARTY_LDELIM:{}case ${1:case_name}${SMARTY_RDELIM:\\}}\n\t$0\n\t${2:${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}}\n",
+		"body": "${SMARTY_LDELIM:{}case ${1:case_name}${SMARTY_RDELIM:\\}}\n\t$0\n\t${2:${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"comment": {
 		"prefix": "comment",
-		"body": "\n${SMARTY_LDELIM:{}* ${1:comment} *${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}* ${1:comment} *${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"debug": {
 		"prefix": "debug",
-		"body": "\n${SMARTY_LDELIM:{}\\$${1:variable}|@debug_print_var${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}\\$${1:variable}|@debug_print_var${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"else": {
 		"prefix": "else",
-		"body": "\n${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$0\n",
+		"body": "${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"elseif": {
 		"prefix": "elseif",
-		"body": "\n${SMARTY_LDELIM:{}elseif ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0\n",
+		"body": "${SMARTY_LDELIM:{}elseif ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"/foreach": {
 		"prefix": "/foreach",
-		"body": "\n${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"foreach": {
 		"prefix": "foreach",
-		"body": "\n${SMARTY_LDELIM:{}foreach from=${1:collection} item=${2:item}${4: key=${3:key}}${6: name=${5:name}}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}foreach from=${1:collection} item=${2:item}${4: key=${3:key}}${6: name=${5:name}}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"/if": {
 		"prefix": "/if",
-		"body": "\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"if": {
 		"prefix": "if",
-		"body": "\n${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"ifelse": {
 		"prefix": "ifelse",
-		"body": "\n${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$2\n${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$3\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$2\n${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$3\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"include": {
 		"prefix": "include",
-		"body": "\n${SMARTY_LDELIM:{}include file=\"${1:file}\"${3: assign=${2:name}}${6: ${4:var1}=${5:value}}${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}include file=\"${1:file}\"${3: assign=${2:name}}${6: ${4:var1}=${5:value}}${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"extends": {
 		"prefix": "extends",
-		"body": "\n${SMARTY_LDELIM:{}extends file=\"${1:file}\"${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}extends file=\"${1:file}\"${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"/block": {
 		"prefix": "/block",
-		"body": "\n${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"block": {
 		"prefix": "block",
-		"body": "\n${SMARTY_LDELIM:{}block name=${1:name}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}block name=${1:name}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"/literal": {
 		"prefix": "/literal",
-		"body": "\n${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}$0\n",
+		"body": "${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}$0",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
 	"literal": {
 		"prefix": "literal",
-		"body": "\n${SMARTY_LDELIM:{}literal${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}\n",
+		"body": "${SMARTY_LDELIM:{}literal${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	}
