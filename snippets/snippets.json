@@ -103,7 +103,7 @@
 	},
 	"block": {
 		"prefix": "block",
-		"body": "\n${SMARTY_LDELIM:\\{}block name=${1:name}}${SMARTY_RDELIM:\\}\n\t$0\n${SMARTY_LDELIM:\\{}/block${SMARTY_RDELIM:\\}}\n",
+		"body": "\n${SMARTY_LDELIM:\\{}block name=${1:name}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:\\{}/block${SMARTY_RDELIM:\\}}\n",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
