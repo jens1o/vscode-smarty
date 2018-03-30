@@ -25,7 +25,7 @@
 	},
 	"case": {
 		"prefix": "case",
-		"body": "\n${SMARTY_LDELIM:\\{}case ${1:case_name}${SMARTY_RDELIM:\\}}\n    $0\n    ${2:${SMARTY_LDELIM:\\{}break${SMARTY_RDELIM:\\}}}\n",
+		"body": "\n${SMARTY_LDELIM:\\{}case ${1:case_name}${SMARTY_RDELIM:\\}}\n\t$0\n\t${2:${SMARTY_LDELIM:\\{}break${SMARTY_RDELIM:\\}}}\n",
 		"description": "",
 		"scope": "text.html.smarty,source.smarty"
 	},
