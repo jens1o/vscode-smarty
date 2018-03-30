@@ -2,121 +2,101 @@
 	"assign": {
 		"prefix": "assign",
 		"body": "${SMARTY_LDELIM:{}assign var=\"${1:name}\" value=${2:value}${4: scope=${3:scope}}${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"break": {
 		"prefix": "break",
 		"body": "${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"/capture": {
 		"prefix": "/capture",
 		"body": "${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"capture": {
 		"prefix": "capture",
 		"body": "${SMARTY_LDELIM:{}capture ${2:name=\"${1:name}\" }${4:assign=\"${3:variable}\" }${6:append=\"${5:array_variable}\"}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/capture${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"case": {
 		"prefix": "case",
 		"body": "${SMARTY_LDELIM:{}case ${1:case_name}${SMARTY_RDELIM:\\}}\n\t$0\n\t${2:${SMARTY_LDELIM:{}break${SMARTY_RDELIM:\\}}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"comment": {
 		"prefix": "comment",
 		"body": "${SMARTY_LDELIM:{}* ${1:comment} *${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"debug": {
 		"prefix": "debug",
 		"body": "${SMARTY_LDELIM:{}\\$${1:variable}|@debug_print_var${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"else": {
 		"prefix": "else",
 		"body": "${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"elseif": {
 		"prefix": "elseif",
 		"body": "${SMARTY_LDELIM:{}elseif ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"/foreach": {
 		"prefix": "/foreach",
 		"body": "${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"foreach": {
 		"prefix": "foreach",
 		"body": "${SMARTY_LDELIM:{}foreach from=${1:collection} item=${2:item}${4: key=${3:key}}${6: name=${5:name}}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/foreach${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"/if": {
 		"prefix": "/if",
 		"body": "${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"if": {
 		"prefix": "if",
 		"body": "${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"ifelse": {
 		"prefix": "ifelse",
 		"body": "${SMARTY_LDELIM:{}if ${1:condition}${SMARTY_RDELIM:\\}}\n\t$2\n${SMARTY_LDELIM:{}else${SMARTY_RDELIM:\\}}\n\t$3\n${SMARTY_LDELIM:{}/if${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"include": {
 		"prefix": "include",
 		"body": "${SMARTY_LDELIM:{}include file=\"${1:file}\"${3: assign=${2:name}}${6: ${4:var1}=${5:value}}${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"extends": {
 		"prefix": "extends",
 		"body": "${SMARTY_LDELIM:{}extends file=\"${1:file}\"${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"/block": {
 		"prefix": "/block",
 		"body": "${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"block": {
 		"prefix": "block",
 		"body": "${SMARTY_LDELIM:{}block name=${1:name}${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/block${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"/literal": {
 		"prefix": "/literal",
 		"body": "${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}$0",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	},
 	"literal": {
 		"prefix": "literal",
 		"body": "${SMARTY_LDELIM:{}literal${SMARTY_RDELIM:\\}}\n\t$0\n${SMARTY_LDELIM:{}/literal${SMARTY_RDELIM:\\}}",
-		"description": "",
-		"scope": "text.html.smarty,source.smarty"
+		"description": ""
 	}
 }
