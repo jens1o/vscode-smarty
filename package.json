@@ -19,12 +19,12 @@
 		"snippets"
 	],
 	"bugs": {
-        "url": "https://github.com/imperez/vscode-smarty/issues"
+        "url": "https://github.com/jens1o/vscode-smarty/issues"
     },
-	"homepage": "https://github.com/imperez/vscode-smarty/blob/master/README.md",
+	"homepage": "https://github.com/jens1o/vscode-smarty/blob/master/README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/imperez/vscode-smarty.git"
+        "url": "https://github.com/jens1o/vscode-smarty.git"
     },
 	"contributes": {
 		"languages": [{
