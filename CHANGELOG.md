@@ -3,7 +3,7 @@
 ## 0.3.0
 Fix escaping in snippets, fixing delimiter in snippets, cleanup codebase (fixes [#6](https://github.com/jens1o/vscode-smarty/issues/6)). Thanks **@matthewspencer**.
 
-**Notice**: The project leadership has been transferred to jens1o. This project will be actively maintained in the future.
+**Notice**: The project leadership has been transferred to jens1o, because @imperez does not have the time for it anymore. :/ This project will be actively maintained in the future. I'm very grateful to be able to maintain the extension and further improve it.
 
 ---
 
