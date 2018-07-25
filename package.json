@@ -82,6 +82,7 @@
 						"right": "}"
 					}
 				},
+				// TODO: Add schema to ensure it is valid
 				"smarty.modifiers": {
 					"type": "array",
 					"description": "The enabled modifiers.",
