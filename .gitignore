@@ -1,2 +1,4 @@
-# ignore build versions
+# ignore built versions
 *.vsix
+node_modules
+out/

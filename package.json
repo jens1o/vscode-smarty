@@ -5,8 +5,19 @@
 	"version": "0.3.0",
 	"icon": "images/logo.png",
 	"publisher": "imperez",
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"compile": "tsc -watch -p ./"
+	},
 	"engines": {
-		"vscode": "^0.10.x"
+		"vscode": "^1.25.0"
+	},
+	"devDependencies": {
+		"typescript": "^2.9.2",
+		"@types/node": "^7.0"
+	},
+	"dependencies": {
+		"vscode": "^1.1.18"
 	},
 	"categories": [
 		"Languages",
@@ -18,31 +29,60 @@
 		"syntax",
 		"snippets"
 	],
+	"main": "./out/extension.js",
 	"bugs": {
-        "url": "https://github.com/jens1o/vscode-smarty/issues"
-    },
+		"url": "https://github.com/jens1o/vscode-smarty/issues"
+	},
 	"homepage": "https://github.com/jens1o/vscode-smarty/blob/master/README.md",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jens1o/vscode-smarty.git"
-    },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jens1o/vscode-smarty.git"
+	},
+	"activationEvents": [
+		"onLanguage:smarty"
+	],
 	"contributes": {
-		"languages": [{
-			"id": "smarty",
-			"aliases": ["Smarty", "smarty"],
-			"extensions": [".tpl",".smarty",".html.smarty"],
-			"configuration": "./smarty.configuration.json"
-		}],
-		"grammars": [{
-			"language": "smarty",
-			"scopeName": "text.html.smarty",
-			"path": "./syntaxes/smarty.tmLanguage"
-		}],
+		"languages": [
+			{
+				"id": "smarty",
+				"aliases": [
+					"Smarty",
+					"smarty"
+				],
+				"extensions": [
+					".tpl",
+					".smarty",
+					".html.smarty"
+				],
+				"configuration": "./smarty.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "smarty",
+				"scopeName": "text.html.smarty",
+				"path": "./syntaxes/smarty.tmLanguage"
+			}
+		],
 		"snippets": [
 			{
 				"language": "smarty",
 				"path": "./snippets/snippets.json"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Smarty configuration",
+			"properties": {
+				"smarty.delimiter": {
+					"type": "object",
+					"description": "The delimiter around smarty expressions.",
+					"default": {
+						"left": "{",
+						"right": "}"
+					}
+				}
+			}
+		}
 	}
 }
