@@ -21,3 +21,14 @@ If you see a bug or have a feature request of what could be added feel free to l
 - ifelse
 - include
 - literal
+
+## HTML Intellisense and Suggestions
+This is planned as an 'out of the box' feature, but it may take some time to achieve.
+
+As a workaround use these settings in VS Code:
+```
+"emmet.syntaxProfiles": {
+  "tpl": "html"
+},
+"emmet.triggerExpansionOnTab": true,
+```
