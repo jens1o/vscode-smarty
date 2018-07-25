@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
     console.log('The Smarty extension is active!');
 
     vscode.workspace.onDidChangeConfiguration(e => {
-        if (e.affectsConfiguration('smarty.delimiter') && completionProvider !== null) {
+        if (e.affectsConfiguration('smarty') && completionProvider !== null) {
             completionProvider.dispose();
             completionProvider = null;
             registerCompletionProvider();
