@@ -28,9 +28,12 @@ export default class CompletionProvider implements vscode.CompletionItemProvider
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): vscode.ProviderResult<vscode.CompletionItem[]> {
         const triggerCharacter = context.triggerCharacter;
 
+
+        // TODO: Debug
         let wordRange = document.getWordRangeAtPosition(position);
 
         console.log(document.getText(wordRange), triggerCharacter);
+        // end debug
 
         if (triggerCharacter === void 0 || triggerCharacter === null) {
             // TODO: Try to find matching selector and then delegate as usual.
