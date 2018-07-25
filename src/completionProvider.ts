@@ -28,13 +28,17 @@ export default class CompletionProvider implements vscode.CompletionItemProvider
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): vscode.ProviderResult<vscode.CompletionItem[]> {
         const triggerCharacter = context.triggerCharacter;
 
-        if (triggerCharacter === '|') {
-            // suggest modifiers
-            return this.provideModifierCompletionItems(context);
-        } else if (triggerCharacter === null) {
+        if (triggerCharacter === null) {
             // TODO: Try to find matching selector and then delegate as usual.
             return [];
+        } else if (triggerCharacter === '|') {
+            // suggest modifiers
+            return this.provideModifierCompletionItems(context);
+        } else if (triggerCharacter === this.delimiter.left) {
+            // TODO: Suggest blocks and variables
+            return [];
         } else {
+            console.error('Unknown Smarty CompletionProvider situation to handle something. Trigger Character:', triggerCharacter);
             return [];
         }
     }
