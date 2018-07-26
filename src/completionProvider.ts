@@ -28,14 +28,19 @@ export default class CompletionProvider implements vscode.CompletionItemProvider
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): vscode.ProviderResult<vscode.CompletionItem[]> {
         const triggerCharacter = context.triggerCharacter;
 
+        let wordRange = document.getWordRangeAtPosition(position, /{(\s+)}/i);
+        const currentText = document.getText(wordRange);
+        console.log(currentText, triggerCharacter);
 
-        // TODO: Debug
-        let wordRange = document.getWordRangeAtPosition(position);
+        // if there is no left delimiter, handle as HTML
+        if (currentText.substring(0, 1) !== this.delimiter.left) {
+            console.log('No smarty-tag detected!');
+            // pass the response to the Emmet provider
+            // TODO: This causes an infinite loop, because vscode is the request passing back to us!
+            return vscode.commands.executeCommand('vscode.executeCompletionItemProvider', document.uri, position, context.triggerCharacter);
+        }
 
-        console.log(document.getText(wordRange), triggerCharacter);
-        // end debug
-
-        if (triggerCharacter === void 0 || triggerCharacter === null) {
+        if (triggerCharacter === void 0) {
             // TODO: Try to find matching selector and then delegate as usual.
             return [];
         } else if (triggerCharacter === '|') {
@@ -57,6 +62,7 @@ export default class CompletionProvider implements vscode.CompletionItemProvider
 
         const results: vscode.ProviderResult<vscode.CompletionItem[]> = [];
 
+        // TODO: Add schema to settings to ensure validation.
         for (const modifier of (vscode.workspace.getConfiguration('smarty').get('modifiers') as BuiltinModifier[])) {
             let completionItem = new vscode.CompletionItem(modifier.name);
             completionItem.documentation = new vscode.MarkdownString(modifier.description);
