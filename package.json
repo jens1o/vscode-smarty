@@ -1,8 +1,9 @@
 {
 	"name": "smarty",
 	"displayName": "Smarty",
+	"license": "GPL"
 	"description": "Syntax highlighting for the Smarty templating language.",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"icon": "images/logo.png",
 	"publisher": "imperez",
 	"engines": {
